@@ -1,0 +1,14 @@
+{
+  "development": {
+    "database": "blog_development",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "blog_test",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "blog_production",
+    "dialect": "postgres"
+  }
+}
