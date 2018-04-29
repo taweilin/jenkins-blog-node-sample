@@ -9,6 +9,7 @@
     "dev": "supervisor index"
   },
   "dependencies": {
+    "ejs": "^2.5.9",
     "express": "^4.16.3",
     "pg": "^7.4.1",
     "sequelize": "^4.37.6"
