@@ -1,0 +1,17 @@
+{
+  "name": "jenkins-blog-node-sample",
+  "version": "1.0.0",
+  "description": "Sample blog for demo jenkins",
+  "main": "index.js",
+  "author": "Kirk Chen <rwk0119@yahoo.com.tw>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "supervisor index"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
