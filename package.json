@@ -6,7 +6,8 @@
   "author": "Kirk Chen <rwk0119@yahoo.com.tw>",
   "license": "MIT",
   "scripts": {
-    "dev": "supervisor index"
+    "dev": "supervisor index",
+    "build": "echo 'BUILDING...'"
   },
   "dependencies": {
     "ejs": "^2.5.9",
