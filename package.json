@@ -7,16 +7,20 @@
   "license": "MIT",
   "scripts": {
     "dev": "supervisor index",
-    "build": "echo 'BUILDING...'"
+    "build": "echo 'BUILDING...'",
+    "deploy": "shipit staging deploy"
   },
   "dependencies": {
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "pg": "^7.4.1",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "shipit-cli": "^4.1.0",
+    "shipit-deploy": "^4.1.0"
   },
   "devDependencies": {
     "sequelize-cli": "^4.0.0",
+    "shipit-yarn": "^0.2.0",
     "supervisor": "^0.12.0"
   }
 }
