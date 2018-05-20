@@ -13,4 +13,6 @@ app.get('/',(req, res)=>{
     res.render('index');
 })
 
-app.listen(3000);
+var server = app.listen(3000);
+
+module.exports = server;
