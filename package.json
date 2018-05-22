@@ -13,6 +13,7 @@
     "deploy": "shipit staging deploy"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "pg": "^7.4.1",
