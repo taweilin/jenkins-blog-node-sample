@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "supervisor index",
-    "test": "MOCHA_FILE=./reports/unittest.xm mocha tests --recursive --reporter mocha-junit-reporter",
+    "test": "MOCHA_FILE=./reports/unittest.xml mocha tests --recursive --reporter mocha-junit-reporter",
     "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
     "build": "echo 'BUILDING...'",
     "deploy": "shipit staging deploy"
