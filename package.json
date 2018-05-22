@@ -9,6 +9,7 @@
     "dev": "supervisor index",
     "test": "MOCHA_FILE=./reports/unittest.xml mocha tests --recursive --reporter mocha-junit-reporter",
     "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
+    "e2e": "nightwatch --env chrome-headless",
     "build": "echo 'BUILDING...'",
     "deploy": "shipit staging deploy"
   },
@@ -23,9 +24,12 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "chromedriver": "^2.38.3",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.17.0",
+    "nightwatch": "^0.9.21",
+    "selenium-server": "^3.12.0",
     "sequelize-cli": "^4.0.0",
     "shipit-yarn": "^0.2.0",
     "supertest": "^3.1.0",
