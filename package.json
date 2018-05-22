@@ -9,7 +9,9 @@
     "dev": "supervisor index",
     "test": "MOCHA_FILE=./reports/unittest.xml mocha tests --recursive --reporter mocha-junit-reporter",
     "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
-    "e2e": "nightwatch --env chrome-headless",
+    "pree2e:exec": "sequelize db:drop && sequelize db:create && sequelize db:migrate",
+    "e2e:exec": "nightwatch --env chrome-headless",
+    "e2e": "NODE_ENV=test run-p -r dev e2e:exec",
     "build": "echo 'BUILDING...'",
     "deploy": "shipit staging deploy"
   },
@@ -29,6 +31,7 @@
     "mocha": "^5.2.0",
     "mocha-junit-reporter": "^1.17.0",
     "nightwatch": "^0.9.21",
+    "npm-run-all": "^4.1.3",
     "selenium-server": "^3.12.0",
     "sequelize-cli": "^4.0.0",
     "shipit-yarn": "^0.2.0",
