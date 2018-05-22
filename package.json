@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "supervisor index",
     "test": "mocha tests --recursive",
-    "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports _mocha -- tests --recursive --reporter mocha-junit-reporter",
+    "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
     "build": "echo 'BUILDING...'",
     "deploy": "shipit staging deploy"
   },
