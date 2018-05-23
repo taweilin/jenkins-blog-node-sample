@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "supervisor index",
     "test": "MOCHA_FILE=./reports/unittest.xml mocha tests --recursive --reporter mocha-junit-reporter",
-    "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir reports --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
+    "coverage": "MOCHA_FILE=./reports/unittest.xml istanbul cover --dir coverage --report cobertura _mocha -- tests --recursive --reporter mocha-junit-reporter",
     "pree2e:exec": "sequelize db:drop && sequelize db:create && sequelize db:migrate",
     "e2e:exec": "nightwatch --env chrome-headless --reporter junit --output reports/e2e.xml",
     "e2e": "NODE_ENV=test run-p -r dev e2e:exec",
