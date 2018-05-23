@@ -4,6 +4,8 @@
     "dialect": "postgres"
   },
   "test": {
+    "username": "jenkins",
+    "password": "jenkins",
     "database": "blog_test",
     "dialect": "postgres"
   },
