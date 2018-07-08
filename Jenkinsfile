@@ -8,32 +8,28 @@ pipeline {
       }
     }
     stage('test') {
-      parallel(
-        "unit test": {
-          stage('unit test') {
-            steps {
-              sh 'yarn coverage'
-            }
-            post {
-              always {
-                junit "reports/unittest.xml"
-              }
-            }
+      parallel {
+        stage('unit test') {
+          steps {
+            sh 'yarn coverage'
           }
-        },
-        "e2e test": {
-          stage('e2e test') {
-            steps {
-              sh 'yarn e2e'
-            }
-            post {
-              always {
-                junit "reports/CHROME*.xml"
-              }
+          post {
+            always {
+              junit "reports/unittest.xml"
             }
           }
         }
-      )
+        stage('e2e test') {
+          steps {
+            sh 'yarn e2e'
+          }
+          post {
+            always {
+              junit "reports/CHROME*.xml"
+            }
+          }
+        }
+      }
     }
   }
 }
