@@ -90,7 +90,7 @@ pipeline {
                   '-Dsonar.github.repository=kirkchen/jenkins-blog-node-sample ' +
                   '-Dsonar.analysis.mode=preview ' +
                   "-Dsonar.github.pullRequest=${env.CHANGE_ID} " +
-                  "-Dsonar.github.oauth=${GITHUB_ACCESS_TOKEN} " +
+                  "-Dsonar.github.oauth=${GITHUB_ACCESS_TOKEN} "
               }
             }
           }
