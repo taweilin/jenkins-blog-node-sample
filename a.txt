@@ -3,3 +3,4 @@ test jenkins after commit again
 test jenkins after commit rerun
 chang port to 8080
 change github wehook url
+recover jenkins url to origin
